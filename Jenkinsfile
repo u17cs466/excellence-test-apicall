@@ -18,7 +18,7 @@ pipeline {
                echo pass
                '''
                 // git credentialsId: 'newtoken', 
-                // url: 'https://github.com/u17cs466/python-jenkins-argocd-k8s.git',
+                // url: 'https://github.com/u17cs466/excellence-test-apicall.git',
                 // branch: 'main'
            }
         }
@@ -50,7 +50,7 @@ pipeline {
         stage('Checkout K8S manifest SCM'){
             steps {
                 git credentialsId: 'newtoken', 
-                url: 'https://github.com/u17cs466/python-jenkins-argocd-k8s.git',
+                url: 'https://github.com/u17cs466/excellence-test-apicall.git',
                 branch: 'main'
             }
         }

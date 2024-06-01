@@ -10,6 +10,8 @@ WORKDIR /react-app
 # Installing dependencies
 COPY ./package.json /react-app/
 
+RUN npm update --force
+
 RUN npm install
 
 EXPOSE 3000

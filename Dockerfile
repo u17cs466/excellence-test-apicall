@@ -18,4 +18,4 @@ EXPOSE 3000
 COPY . .
 
 # Starting our application
-CMD ["npm","start]
+CMD ["npm","start"]

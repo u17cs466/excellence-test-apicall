@@ -1,5 +1,5 @@
 # Fetching the latest node image on alpine linux
-FROM node:14
+FROM node:18
 
 # Declaring env
 ENV NODE_ENV development
@@ -10,7 +10,7 @@ WORKDIR /react-app
 # Installing dependencies
 COPY ./package.json /react-app/
 
-RUN npm update --force
+# RUN npm update --force
 
 RUN npm install
 

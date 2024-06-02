@@ -49,9 +49,7 @@ pipeline {
         
         stage('Checkout K8S manifest SCM'){
             steps {
-                git credentialsId: 'newtoken', 
-                url: 'https://github.com/u17cs466/excellence-test-apicall.git',
-                branch: 'main'
+               git branch: 'main', credentialsId: 'github', url: 'https://github.com/u17cs466/excellence-test-apicall.git'
             }
         }
         

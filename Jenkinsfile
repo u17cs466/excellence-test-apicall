@@ -70,6 +70,8 @@ pipeline {
                        
                         git commit -m 'Updated the deploy yaml | Jenkins Pipeline'
                         git remote -v
+                        git remote set-url origin git@github.com:u17cs466/excellence-test-apicall.git
+
                         git push origin main
                         
                         '''                        

@@ -1,5 +1,5 @@
 # Fetching the latest node image on alpine linux
-FROM node:18-alpine
+FROM node:18
 
 # Declaring env
 ENV NODE_ENV development

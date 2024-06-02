@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-container
-          image: nginx:1.16.1
+          image: srikanth2233/damacharla11:20
           ports:
             - containerPort: 3000
 ---

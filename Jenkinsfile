@@ -67,7 +67,7 @@ pipeline {
                         git config --global user.name "u17cs466"
                         git config --global user.email "srikanth.damacharla99@gmail.com"
                         
-                        // git commit --amend --reset-author -m "Updated the user email"
+                       
                         git commit -m 'Updated the deploy yaml | Jenkins Pipeline'
                         git remote -v
                         git push origin main

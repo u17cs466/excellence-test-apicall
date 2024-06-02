@@ -59,7 +59,7 @@ pipeline {
                    withCredentials([string(credentialsId: 'githubtoken', variable: 'githubtoken')]) {
                         sh '''
                         ls
-                        sed -i "s|image:srikanth2233/damacharla11:.*|image:srikanth2233/damacharla11:${NEW_IMAGE}|g" deploy.yaml
+                        sed -i "s|image:srikanth2233/damacharla11:.*|image:srikanth2233/damacharla11:${BUILD_NUMBER}|g" deploy.yaml
                         cat deploy.yaml
                         git add deploy.yaml
                         

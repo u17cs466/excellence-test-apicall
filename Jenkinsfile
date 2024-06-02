@@ -59,7 +59,6 @@ pipeline {
                    withCredentials([string(credentialsId: 'githubtoken', variable: 'githubtoken')]) {
                         sh '''
                         ls
-                        cd deploy
                         cat deploy.yaml
                         sed -i \'\' "s/32/${BUILD_NUMBER}/g" deploy.yaml
                         cat deploy.yaml

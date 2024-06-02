@@ -56,7 +56,7 @@ pipeline {
         stage('Update K8S manifest & push to Repo'){
             steps {
                 script{
-                   withCredentials([string(credentialsId: 'gittoken', variable: 'gittoken')]) {
+                   withCredentials([string(credentialsId: 'githubtoken', variable: 'githubtoken')]) {
                         sh '''
                         cd deploy
                         cat deploy.yaml

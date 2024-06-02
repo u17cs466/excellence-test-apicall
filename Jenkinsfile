@@ -56,7 +56,7 @@ pipeline {
         stage('Update K8S manifest & push to Repo'){
             steps {
                 script{
-                   withCredentials([string(credentialsId: 'githubtoken', variable: 'githubtoken')]) {
+                   withCredentials([string(credentialsId: 'demotoken', variable: 'demotoken')]) {
                         sh '''
                         ls
                         sed -i "s|image: srikanth2233/damacharla11:.*|image: srikanth2233/damacharla11:${BUILD_NUMBER}|g" deploy.yaml

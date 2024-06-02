@@ -68,7 +68,6 @@ pipeline {
                         
                         git commit --amend --reset-author -m "Updated the user email"
                         git commit -m 'Updated the deploy yaml | Jenkins Pipeline'
-                        git remote -v
                         git push origin main
                         
                         '''                        

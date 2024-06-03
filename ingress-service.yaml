@@ -10,6 +10,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
+  - host: internal.path.to.argocd.io
   - http:
       paths:
       - path: /nginx(/|$)(.*)
@@ -41,3 +42,7 @@ spec:
             port:
               name: http
               
+  tls:
+  - hosts:
+    - internal.path.to.argocd.io
+    secretName: your-certificate-name    

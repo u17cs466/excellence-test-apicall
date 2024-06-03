@@ -34,7 +34,7 @@ spec:
             name: nginx
             port:
               number: 80
-      - path: /
+      - path: /argocd
         pathType: Prefix
         backend:
           service:

@@ -55,7 +55,7 @@ pipeline {
         
         stage('Update K8S manifest & push to Repo'){
             environment {
-            GIT_REPO_NAME = "excellence-test-apical"
+            GIT_REPO_NAME = "excellence-test-apicall"
             GIT_USER_NAME = "u17cs466"
         }
             steps {

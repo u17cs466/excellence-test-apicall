@@ -20,6 +20,7 @@ pipeline {
                 // git credentialsId: 'newtoken', 
                 // url: 'https://github.com/u17cs466/excellence-test-apicall.git',
                 // branch: 'main'
+                // demo server
            }
         }
 

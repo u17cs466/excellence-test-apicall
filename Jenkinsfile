@@ -4,7 +4,7 @@ pipeline {
     
     environment {
         IMAGE_TAG = "${BUILD_NUMBER}"
-        GIT_REPO_NAME=https://github.com/u17cs466/excellence-test-apical        
+             
     }
     
     stages {
@@ -69,7 +69,7 @@ pipeline {
                         git config --global user.email "srikanth.damacharla99@gmail.com"                                          
                        
                         git commit -m 'Updated the deploy yaml | Jenkins Pipeline'
-                        git push https://${demotoken}@github.com/${u17cs466}/${GIT_REPO_NAME} HEAD:main
+                        git push https://${demotoken}@github.com/${u17cs466}/${https://github.com/u17cs466/excellence-test-apical} HEAD:main
                         
                         '''                        
                     }

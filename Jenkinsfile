@@ -69,7 +69,7 @@ pipeline {
                         git config --global user.email "srikanth.damacharla99@gmail.com"                                          
                        
                         git commit -m 'Updated the deploy yaml | Jenkins Pipeline'
-                        git push https://${demotoken}@github.com/${u17cs466}/${https://github.com/u17cs466/excellence-test-apical} HEAD:main
+                        git push https://${demotoken}@github.com/${u17cs466}/excellence-test-apical HEAD:main
                         
                         '''                        
                     }

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-container
-          image: srikanth2233/damacharla11:5
+          image: srikanth2233/damacharla11:6
           ports:
             - containerPort: 3000
 ---

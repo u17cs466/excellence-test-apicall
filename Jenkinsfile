@@ -74,7 +74,6 @@ pipeline {
                        
                         git commit -m 'Updated the deploy yaml | Jenkins Pipeline'
                         git push https://${demotoken}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
-                        
                         '''                        
                     }
                 }

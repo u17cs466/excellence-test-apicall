@@ -4,6 +4,7 @@ pipeline {
     
     environment {
         IMAGE_TAG = "${BUILD_NUMBER}"
+        GIT_REPO_NAME="${https://github.com/u17cs466/excellence-test-apical}"
         
     }
     
@@ -66,14 +67,10 @@ pipeline {
                         git add deploy.yaml
                         
                         git config --global user.name "u17cs466"
-                        git config --global user.email "srikanth.damacharla99@gmail.com"
-                        git branch: 'main', credentialsId: 'demotoken', url: 'https://github.com/u17cs466/excellence-test-apical'                      
+                        git config --global user.email "srikanth.damacharla99@gmail.com"                                          
                        
                         git commit -m 'Updated the deploy yaml | Jenkins Pipeline'
-                        git remote -v
-                        git remote set-url origin git@github.com:u17cs466/excellence-test-apicall.git
-
-                        git push origin main
+                        git push https://${demotoken}@github.com/${u17cs466}/${GIT_REPO_NAME} HEAD:main
                         
                         '''                        
                     }

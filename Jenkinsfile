@@ -63,7 +63,7 @@ pipeline {
                         sh '''
                         ls
                         cd ReactApp
-                        cat deploy.yaml
+                        
                         sed -i "s|image: srikanth2233/damacharla11:.*|image: srikanth2233/damacharla11:${BUILD_NUMBER}|g" deploy.yaml
 
                         cat deploy.yaml

@@ -47,13 +47,14 @@ pipeline {
         stage('Checkout K8S manifest SCM'){
             steps {
                git branch: 'main', credentialsId: 'github', url: 'https://github.com/u17cs466/argocd-deployments.git'
+            }
         }
         
         stage('Update K8S manifest & push to Repo'){
             environment {
             GIT_REPO_NAME = "argocd-deployments"
             GIT_USER_NAME = "u17cs466"
-        }
+            }
             steps {
                 script{
                    withCredentials([string(credentialsId: 'demotoken', variable: 'demotoken')]) {
@@ -71,6 +72,7 @@ pipeline {
                        
                         git commit -m 'Updated the deploy yaml | Jenkins Pipeline'
                         git push https://${demotoken}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
+
                         '''                        
                     }
                 }

@@ -4,7 +4,7 @@ pipeline {
     
     environment {
         IMAGE_TAG = "${BUILD_NUMBER}"
-             
+        
     }
     
     stages {
@@ -54,6 +54,10 @@ pipeline {
         }
         
         stage('Update K8S manifest & push to Repo'){
+            environment {
+            GIT_REPO_NAME = "excellence-test-apical"
+            GIT_USER_NAME = "u17cs466"
+        }
             steps {
                 script{
                    withCredentials([string(credentialsId: 'demotoken', variable: 'demotoken')]) {
@@ -69,12 +73,13 @@ pipeline {
                         git config --global user.email "srikanth.damacharla99@gmail.com"                                          
                        
                         git commit -m 'Updated the deploy yaml | Jenkins Pipeline'
-                        git push https://${demotoken}@github.com/${u17cs466}/excellence-test-apical HEAD:main
+                        git push https://${demotoken}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
                         
                         '''                        
                     }
                 }
             }
+        }
         }
     }
 }

@@ -54,30 +54,32 @@ pipeline {
         }
         
         stage('Update K8S manifest & push to Repo'){
+            environment {
+            GIT_REPO_NAME = "excellence-test-apicall"
+            GIT_USER_NAME = "u17cs466"
+        }
             steps {
                 script{
                    withCredentials([string(credentialsId: 'demotoken', variable: 'demotoken')]) {
                         sh '''
                         ls
+                        cd ReactApp
                         sed -i "s|image: srikanth2233/damacharla11:.*|image: srikanth2233/damacharla11:${BUILD_NUMBER}|g" deploy.yaml
 
                         cat deploy.yaml
                         git add deploy.yaml
                         
                         git config --global user.name "u17cs466"
-                        git config --global user.email "srikanth.damacharla99@gmail.com"
-                        
+                        git config --global user.email "srikanth.damacharla99@gmail.com"                                          
                        
                         git commit -m 'Updated the deploy yaml | Jenkins Pipeline'
-                        git remote -v
-                        git remote set-url origin git@github.com:u17cs466/excellence-test-apicall.git
-
-                        git push origin main
+                        git push https://${demotoken}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
                         
                         '''                        
                     }
                 }
             }
+        
         }
     }
 }

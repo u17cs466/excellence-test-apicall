@@ -4,8 +4,7 @@ pipeline {
     
     environment {
         IMAGE_TAG = "${BUILD_NUMBER}"
-        GIT_REPO_NAME="${https://github.com/u17cs466/excellence-test-apical}"
-        
+        GIT_REPO_NAME=https://github.com/u17cs466/excellence-test-apical        
     }
     
     stages {

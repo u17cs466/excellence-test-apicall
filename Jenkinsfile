@@ -67,7 +67,7 @@ pipeline {
                         
                         git config --global user.name "u17cs466"
                         git config --global user.email "srikanth.damacharla99@gmail.com"
-                        
+                        git branch: 'main', credentialsId: 'demotoken', url: 'https://github.com/u17cs466/excellence-test-apical'                      
                        
                         git commit -m 'Updated the deploy yaml | Jenkins Pipeline'
                         git remote -v

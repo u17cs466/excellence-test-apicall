@@ -59,6 +59,7 @@ pipeline {
                    withCredentials([string(credentialsId: 'demotoken', variable: 'demotoken')]) {
                         sh '''
                         ls
+                        cd ReactApp
                         sed -i "s|image: srikanth2233/damacharla11:.*|image: srikanth2233/damacharla11:${BUILD_NUMBER}|g" deploy.yaml
 
                         cat deploy.yaml
